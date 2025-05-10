@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas Ofertas - BOIA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/minhas-ofertas.css" />
+</head>
+<body>
+  <header class="header-logado">
+    <div class="container">
+      <div class="header-left">
+        <img src="fotos/logo.png" alt="BOIA Logo" class="logo" />
+        <nav>
+          <ul>
+            <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="trocas.html"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+            <li><a href="minhas-ofertas.html" class="active"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+            <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+            <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="user-menu">
+          <span class="user-name">Mercadinho Frutas</span>
+          <i class="fas fa-chevron-down"></i>
+          <div class="dropdown-menu">
+            <a href="perfil.html"><i class="fas fa-user"></i> Meu Perfil</a>
+            <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+            <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+          </div>
+        </div>
+        <div class="notificacoes">
+          <i class="fas fa-bell"></i>
+          <span class="notificacao-count">2</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="minhas-ofertas-container">
+    <div class="container">
+      <div class="page-header">
+        <h2><i class="fas fa-box-open"></i> Minhas Ofertas</h2>
+        <a href="nova-oferta.html" class="btn-nova-oferta">
+          <i class="fas fa-plus"></i> Nova Oferta
+        </a>
+      </div>
+
+      <div class="filtros">
+        <div class="filtro-group">
+          <label for="status">Status:</label>
+          <select id="status">
+            <option value="todas">Todas</option>
+            <option value="ativas">Ativas</option>
+            <option value="pendentes">Pendentes</option>
+            <option value="concluidas">Concluídas</option>
+          </select>
+        </div>
+        <div class="filtro-group">
+          <label for="ordenar">Ordenar por:</label>
+          <select id="ordenar">
+            <option value="recentes">Mais recentes</option>
+            <option value="antigas">Mais antigas</option>
+            <option value="quantidade">Maior quantidade</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Aqui o JS irá renderizar as ofertas dinamicamente -->
+      <div class="ofertas-list">
+        <div class="loading-msg">Carregando suas ofertas...</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>BOIA</h3>
+          <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Ajuda</h3>
+          <ul>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Perguntas frequentes</a></li>
+            <li><a href="#">Segurança</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Termos</h3>
+          <ul>
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Diretrizes da comunidade</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+  <script src="js/global.js"></script>
+  <script src="js/minhas-ofertas.js"></script>
+</body>
+</html>

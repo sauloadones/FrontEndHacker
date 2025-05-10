@@ -1,0 +1,264 @@
+/* quem-somos.css */
+
+.hero-interna {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.hero-interna h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.hero-interna p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.nossa-historia {
+    padding: 60px 0;
+}
+
+.historia-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.historia-texto {
+    flex: 1;
+}
+
+.historia-texto h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.historia-texto p {
+    font-size: 1.1rem;
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.historia-imagem {
+    flex: 1;
+}
+
+.historia-imagem img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.valores {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.valores h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.valor-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-5px);
+}
+
+.valor-card i {
+    font-size: 2.5rem;
+    color: #2e8b57;
+    margin-bottom: 20px;
+}
+
+.valor-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.valor-card p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+.equipe {
+    padding: 60px 0;
+}
+
+.equipe h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.equipe-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.membro {
+    width: 250px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.membro:hover {
+    transform: translateY(-5px);
+}
+
+.membro img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #2e8b57;
+}
+
+.membro h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.membro .cargo {
+    color: #2e8b57;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.membro .bio {
+    color: #7f8c8d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.cta-equipe {
+    padding: 60px 0;
+    background-color: #2e8b57;
+    text-align: center;
+    color: #fff;
+}
+
+.cta-equipe h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cta-equipe p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: #fff;
+    color: #2e8b57;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #2e8b57;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .historia-content {
+        flex-direction: column;
+    }
+    
+    .historia-texto, .historia-imagem {
+        flex: none;
+        width: 100%;
+    }
+    
+    .historia-imagem {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-interna {
+        padding: 60px 0;
+    }
+    
+    .hero-interna h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-interna p {
+        font-size: 1rem;
+    }
+    
+    .valores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .equipe-grid {
+        justify-content: space-around;
+    }
+    
+    .membro {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 576px) {
+    .membro {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .valor-card {
+        padding: 20px;
+    }
+    
+    .cta-equipe h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-equipe p {
+        font-size: 1rem;
+    }
+}

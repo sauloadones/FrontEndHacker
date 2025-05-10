@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - BOIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/relatorios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.css">
+</head>
+<body>
+    <header class="header-logado">
+        <div class="container">
+            <div class="header-left">
+                <img src="fotos/logo.png" alt="BOIA Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="trocas.html"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+                        <li><a href="minhas-ofertas.html"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+                        <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+                        <li><a href="relatorios.html" class="active"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Mercadinho Frutas</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="perfil.html"><i class="fas fa-user"></i> Meu Perfil</a>
+                        <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+        </div>
+    </header>
+
+    <main class="relatorios-container">
+        <div class="container">
+            <div class="relatorios-header">
+                <h2><i class="fas fa-chart-pie"></i> Relatórios e Estatísticas</h2>
+                <p>Analise seu impacto e desempenho na plataforma</p>
+                
+                <div class="filtros-relatorios">
+                    <div class="filtro-item">
+                        <label for="periodo">Período:</label>
+                        <select id="periodo">
+                            <option value="7">Últimos 7 dias</option>
+                            <option value="30" selected>Últimos 30 dias</option>
+                            <option value="90">Últimos 3 meses</option>
+                            <option value="365">Último ano</option>
+                            <option value="custom">Personalizado</option>
+                        </select>
+                    </div>
+                    <div class="filtro-item custom-date" style="display:none;">
+                        <label for="data-inicio">De:</label>
+                        <input type="date" id="data-inicio">
+                        <label for="data-fim">Até:</label>
+                        <input type="date" id="data-fim">
+                    </div>
+                    <button class="btn-filtrar"><i class="fas fa-filter"></i> Aplicar Filtros</button>
+                    <button class="btn-exportar"><i class="fas fa-file-export"></i> Exportar Relatório</button>
+                </div>
+            </div>
+
+            <div class="resumo-estatistico">
+                <div class="estatistica-card">
+                    <div class="estatistica-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="estatistica-info">
+                        <h3>185 kg</h3>
+                        <p>Alimentos doados</p>
+                        <span class="variacao positiva"><i class="fas fa-arrow-up"></i> 12% em relação ao último mês</span>
+                    </div>
+                </div>
+                <div class="estatistica-card">
+                    <div class="estatistica-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="estatistica-info">
+                        <h3>24</h3>
+                        <p>Doações realizadas</p>
+                        <span class="variacao positiva"><i class="fas fa-arrow-up"></i> 8% em relação ao último mês</span>
+                    </div>
+                </div>
+                <div class="estatistica-card">
+                    <div class="estatistica-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="estatistica-info">
+                        <h3>15</h3>
+                        <p>Novas conexões</p>
+                        <span class="variacao neutra"><i class="fas fa-equals"></i> Mesmo que o último mês</span>
+                    </div>
+                </div>
+                <div class="estatistica-card">
+                    <div class="estatistica-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="estatistica-info">
+                        <h3>4.7</h3>
+                        <p>Avaliação média</p>
+                        <span class="variacao negativa"><i class="fas fa-arrow-down"></i> 0.2 em relação ao último mês</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção dos Gráficos Atualizados -->
+            <div class="graficos-section">
+                <div class="grafico-card">
+                    <h3><i class="fas fa-chart-line"></i> Doações Mensais</h3>
+                    <div class="grafico-container" style="height: 300px;">
+                        <canvas id="graficoDoacoes"></canvas>
+                    </div>
+                </div>
+                <div class="grafico-card">
+                    <h3><i class="fas fa-chart-pie"></i> Tipos de Alimentos Doados</h3>
+                    <div class="grafico-container" style="height: 300px;">
+                        <canvas id="graficoAlimentos"></canvas>
+                    </div>
+                </div>
+                <div class="grafico-card full-width">
+                    <h3><i class="fas fa-map-marked-alt"></i> Doações por Região</h3>
+                    <div class="grafico-container" style="height: 400px;">
+                        <canvas id="graficoRegioes"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabela-relatorios">
+                <h3><i class="fas fa-table"></i> Histórico Detalhado de Doações</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Tipo de Alimento</th>
+                                <th>Quantidade</th>
+                                <th>Destinatário</th>
+                                <th>Local</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>15/05/2023</td>
+                                <td>Frutas</td>
+                                <td>12 kg</td>
+                                <td>Lar dos Idosos</td>
+                                <td>São Paulo - SP</td>
+                                <td><span class="status concluido">Concluído</span></td>
+                                <td><button class="btn-detalhes"><i class="fas fa-eye"></i> Detalhes</button></td>
+                            </tr>
+                            <tr>
+                                <td>10/05/2023</td>
+                                <td>Pães</td>
+                                <td>8 kg</td>
+                                <td>Comunidade Santa Maria</td>
+                                <td>São Paulo - SP</td>
+                                <td><span class="status concluido">Concluído</span></td>
+                                <td><button class="btn-detalhes"><i class="fas fa-eye"></i> Detalhes</button></td>
+                            </tr>
+                            <tr>
+                                <td>05/05/2023</td>
+                                <td>Legumes</td>
+                                <td>15 kg</td>
+                                <td>Casa da Criança</td>
+                                <td>São Paulo - SP</td>
+                                <td><span class="status concluido">Concluído</span></td>
+                                <td><button class="btn-detalhes"><i class="fas fa-eye"></i> Detalhes</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="paginacao">
+                    <button class="btn-pagina"><i class="fas fa-chevron-left"></i></button>
+                    <span class="pagina-atual">1</span>
+                    <button class="btn-pagina">2</button>
+                    <button class="btn-pagina">3</button>
+                    <button class="btn-pagina"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BOIA</h3>
+                    <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Termos</h3>
+                    <ul>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Diretrizes da comunidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mostrar/ocultar datas personalizadas
+            document.getElementById('periodo').addEventListener('change', function() {
+                const customDate = document.querySelector('.custom-date');
+                customDate.style.display = this.value === 'custom' ? 'flex' : 'none';
+            });
+
+            // Gráfico de doações mensais
+            const ctxDoacoes = document.getElementById('graficoDoacoes').getContext('2d');
+            new Chart(ctxDoacoes, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                    datasets: [{
+                        label: 'Kg de alimentos doados',
+                        data: [120, 150, 180, 160, 185, 90],
+                        backgroundColor: '#4CAF50',
+                        borderColor: '#388E3C',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + ' kg';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + ' kg';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+
+            const ctxAlimentos = document.getElementById('graficoAlimentos').getContext('2d');
+            new Chart(ctxAlimentos, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Frutas', 'Legumes', 'Pães', 'Laticínios', 'Outros'],
+                    datasets: [{
+                        data: [35, 25, 20, 15, 5],
+                        backgroundColor: [
+                            '#FF6384',
+                            '#36A2EB',
+                            '#FFCE56',
+                            '#4BC0C0',
+                            '#9966FF'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${label}: ${value} kg (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de doações por região
+            const ctxRegioes = document.getElementById('graficoRegioes').getContext('2d');
+            new Chart(ctxRegioes, {
+                type: 'line',
+                data: {
+                    labels: ['Centro', 'Zona Norte', 'Zona Sul', 'Zona Leste', 'Zona Oeste'],
+                    datasets: [{
+                        label: 'Doações por região (kg)',
+                        data: [65, 59, 80, 81, 56],
+                        fill: false,
+                        backgroundColor: '#FF9800',
+                        borderColor: '#F57C00',
+                        tension: 0.1,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + ' kg';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return value + ' kg';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

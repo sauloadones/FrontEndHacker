@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - BOIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+    <header class="header-logado">
+        <div class="container">
+            <div class="header-left">
+                <img src="fotos/logo.png" alt="BOIA Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="trocas.html"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+                        <li><a href="minhas-ofertas.html"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+                        <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+                        <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Mercadinho Frutas</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="perfil.html" class="active"><i class="fas fa-user"></i> Meu Perfil</a>
+                        <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+                <div class="notificacoes">
+                    <i class="fas fa-bell"></i>
+                    <span class="notificacao-count">2</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="perfil-container">
+        <div class="container">
+            <div class="perfil-header">
+                <div class="perfil-avatar">
+                    <img src="fotos/mercado.jpg" alt="Foto de perfil">
+                    <button class="btn-alterar-foto"><i class="fas fa-camera"></i> Alterar</button>
+                </div>
+                <div class="perfil-info">
+                    <h2>Mercadinho Frutas</h2>
+                    <p class="perfil-tipo"><i class="fas fa-user-tag"></i> Doador (Mercado)</p>
+                    <div class="perfil-avaliacao">
+                        <div class="estrelas">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>4.5 (12 avaliações)</span>
+                    </div>
+                    <div class="perfil-stats">
+                        <div class="stat-item">
+                            <strong>28</strong>
+                            <span>Trocas</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>320kg</strong>
+                            <span>Alimentos</span>
+                        </div>
+                        <div class="stat-item">
+                            <strong>85%</strong>
+                            <span>Avaliações positivas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="perfil-content">
+                <div class="perfil-section">
+                    <h3><i class="fas fa-info-circle"></i> Informações Pessoais</h3>
+                    <form class="perfil-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" value="Maria Souza">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" value="maria@ongcomunitaria.org">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone" value="(11) 98765-4321">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipo">Tipo de Conta</label>
+                                <select id="tipo" disabled>
+                                    <option>Receptor (ONG, Cozinha Comunitária)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-cancelar">Cancelar</button>
+                            <button type="submit" class="btn-salvar">Salvar Alterações</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="perfil-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+                    <form class="endereco-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" value="01234-567">
+                            </div>
+                            <div class="form-group">
+                                <label for="endereco">Endereço</label>
+                                <input type="text" id="endereco" value="Rua das Flores, 123">
+                            </div>
+                            <div class="form-group">
+                                <label for="complemento">Complemento</label>
+                                <input type="text" id="complemento" value="Sala 2">
+                            </div>
+                            <div class="form-group">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" id="bairro" value="Centro">
+                            </div>
+                            <div class="form-group">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" value="São Paulo">
+                            </div>
+                            <div class="form-group">
+                                <label for="estado">Estado</label>
+                                <select id="estado">
+                                    <option selected>SP</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn-cancelar">Cancelar</button>
+                            <button type="submit" class="btn-salvar">Salvar Alterações</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="perfil-section">
+                    <h3><i class="fas fa-lock"></i> Segurança</h3>
+                    <div class="seguranca-item">
+                        <div class="seguranca-info">
+                            <h4>Senha</h4>
+                            <p>Última alteração: 15/03/2023</p>
+                        </div>
+                        <button class="btn-alterar-senha">Alterar Senha</button>
+                    </div>
+                    <div class="seguranca-item">
+                        <div class="seguranca-info">
+                            <h4>Autenticação de Dois Fatores</h4>
+                            <p>Proteja sua conta com um código adicional</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BOIA</h3>
+                    <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Termos</h3>
+                    <ul>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Diretrizes da comunidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

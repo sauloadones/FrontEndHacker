@@ -1,0 +1,387 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 0 80px;
+    position: relative;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.logo-boia {
+    width: 150px;
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 60px auto 0;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.stat-item {
+    padding: 0 30px;
+    text-align: center;
+    color: #333;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: #2e8b57;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* Marcas Section */
+.marcas {
+    padding: 60px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.marcas h3 {
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.marcas-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.marcas-container img {
+    height: 150px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.marcas-container img:hover {
+    opacity: 1;
+}
+
+/* Video Demo Section */
+.video-demo {
+    padding: 100px 0;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.video-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #2e8b57;
+}
+
+.video-content p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 450px;
+    background-color: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.video-placeholder i {
+    font-size: 4rem;
+    color: #2e8b57;
+    z-index: 2;
+}
+
+.video-placeholder:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Como Funciona Section */
+.como-funciona {
+    padding: 100px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.como-funciona h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #2e8b57;
+}
+
+.passos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.passo-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    border-top: 4px solid #2e8b57;
+}
+
+.passo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.passo-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #2e8b57;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.passo-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2e8b57;
+}
+
+.passo-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Destaques Section */
+.destaques {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.destaques .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.destaque-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.destaque-card:hover {
+    transform: translateY(-10px);
+}
+
+.destaque-card i {
+    font-size: 3rem;
+    color: #2e8b57;
+    margin-bottom: 20px;
+}
+
+.destaque-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.destaque-card p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Impacto Section */
+.impacto {
+    padding: 100px 0;
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+}
+
+.impacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.impacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.impacto-item h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.impacto-item p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Depoimentos Section */
+.depoimentos {
+    padding: 100px 0;
+    background-color: white;
+}
+
+.depoimentos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #2e8b57;
+}
+
+.depoimentos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.depoimento-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.depoimento-card:before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(46, 139, 87, 0.1);
+    font-family: serif;
+    line-height: 1;
+}
+
+.depoimento-texto {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.depoimento-autor {
+    display: flex;
+    align-items: center;
+}
+
+.depoimento-autor img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.depoimento-autor h4 {
+    color: #2e8b57;
+    margin-bottom: 5px;
+}
+
+.depoimento-autor p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* CTA Final Section */
+.cta-final {
+    padding: 100px 0;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.cta-final h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-final p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    margin-top: 40px;
+}

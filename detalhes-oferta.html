@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Oferta - BOIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/detalhes-oferta.css">
+</head>
+<body>
+    <header class="header-logado">
+        <div class="container">
+            <div class="header-left">
+                <h1 class="logo">BOIA</h1>
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="trocas.html"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+                        <li><a href="minhas-ofertas.html"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+                        <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+                        <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Mercadinho Frutas</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="perfil.html"><i class="fas fa-user"></i> Meu Perfil</a>
+                        <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+                <div class="notificacoes">
+                    <i class="fas fa-bell"></i>
+                    <span class="notificacao-count">3</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="detalhes-oferta-container">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="buscar-doacoes.html"><i class="fas fa-arrow-left"></i> Voltar para buscas</a>
+            </div>
+
+            <div class="oferta-header">
+                <h2>10 caixas de legumes variados</h2>
+                <div class="oferta-meta">
+                    <span class="oferta-local"><i class="fas fa-store"></i> Supermercado Verde</span>
+                    <span class="oferta-distancia"><i class="fas fa-map-marker-alt"></i> 2.3km de distância</span>
+                    <span class="oferta-validade"><i class="fas fa-clock"></i> Disponível até: 05/06</span>
+                </div>
+            </div>
+
+            <div class="oferta-content">
+                <div class="oferta-galeria">
+                    <div class="imagem-principal" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="imagens-secundarias">
+                        <div class="imagem-secundaria" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="imagem-secundaria" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                        <div class="imagem-secundaria" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    </div>
+                </div>
+
+                <div class="oferta-detalhes">
+                    <div class="detalhes-section">
+                        <h3><i class="fas fa-info-circle"></i> Descrição</h3>
+                        <p>Legumes variados (cenoura, batata, abobrinha) embalados em caixas de 5kg cada. Algumas embalagens podem estar levemente danificadas, mas os alimentos estão em perfeito estado para consumo.</p>
+                    </div>
+
+                    <div class="detalhes-section">
+                        <h3><i class="fas fa-box-open"></i> Detalhes da Oferta</h3>
+                        <div class="detalhes-grid">
+                            <div class="detalhe-item">
+                                <span class="detalhe-label">Quantidade:</span>
+                                <span class="detalhe-valor">10 caixas (aproximadamente 50kg)</span>
+                            </div>
+                            <div class="detalhe-item">
+                                <span class="detalhe-label">Validade:</span>
+                                <span class="detalhe-valor">05/06/2023</span>
+                            </div>
+                            <div class="detalhe-item">
+                                <span class="detalhe-label">Retirada até:</span>
+                                <span class="detalhe-valor">05/06/2023</span>
+                            </div>
+                            <div class="detalhe-item">
+                                <span class="detalhe-label">Horário:</span>
+                                <span class="detalhe-valor">14h às 18h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detalhes-section">
+                        <h3><i class="fas fa-map-marker-alt"></i> Local de Retirada</h3>
+                        <p>Supermercado Verde - Av. Paulista, 1000, São Paulo/SP</p>
+                        <p><strong>Instruções:</strong> Pedir no balcão de atendimento e informar que é uma doação através da plataforma BOIA.</p>
+                        <div class="mapa-placeholder">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Mapa mostrando a localização</p>
+                        </div>
+                    </div>
+
+                    <div class="detalhes-section">
+                        <h3><i class="fas fa-user-shield"></i> Sobre o Doador</h3>
+                        <div class="doador-info">
+                            <img src="https://via.placeholder.com/50" alt="Doador" class="doador-avatar">
+                            <div class="doador-detalhes">
+                                <h4>Supermercado Verde</h4>
+                                <div class="doador-avaliacao">
+                                    <div class="estrelas">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>4.5 (12 avaliações)</span>
+                                </div>
+                                <p class="doador-stats">25 doações realizadas</p>
+                            </div>
+                        </div>
+                        <button class="btn-chat"><i class="fas fa-comments"></i> Enviar mensagem</button>
+                    </div>
+
+                    <div class="detalhes-section garantia">
+                        <h3><i class="fas fa-shield-alt"></i> Garantia BOIA</h3>
+                        <div class="garantia-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Doador verificado e com histórico na plataforma</p>
+                        </div>
+                        <div class="garantia-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Fotos reais dos alimentos disponíveis</p>
+                        </div>
+                        <div class="garantia-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>Sistema de avaliação transparente</p>
+                        </div>
+                    </div>
+
+                    <div class="acao-oferta">
+                        <button class="btn-solicitar">Solicitar Doação</button>
+                        <p class="acao-info">Você terá 1h para confirmar os detalhes com o doador após a solicitação</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BOIA</h3>
+                    <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Termos</h3>
+                    <ul>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Diretrizes da comunidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/detalhes-oferta.js"></script>
+</body>
+</html>

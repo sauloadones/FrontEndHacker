@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Doações - BOIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buscar-doacoes.css">
+</head>
+<body>
+    <header class="header-logado">
+        <div class="container">
+            <div class="header-left">
+                <img src="fotos/logo.png" alt="BOIA Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="trocas.html"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+                        <li><a href="minhas-ofertas.html"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+                        <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+                        <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Usuário</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="perfil.html"><i class="fas fa-user"></i> Meu Perfil</a>
+                        <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+                <div class="notificacoes">
+                    <i class="fas fa-bell"></i>
+                    <span class="notificacao-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="buscar-doacoes-container">
+        <div class="container">
+            <div class="page-header">
+                <h2><i class="fas fa-search"></i> Buscar Doações</h2>
+                <div class="filtros">
+                    <div class="filtro-group">
+                        <label for="tipoAlimento">Tipo de Alimento:</label>
+                        <select id="tipoAlimento">
+                            <option value="">Todos</option>
+                            <option value="hortifruti">Hortifrúti</option>
+                            <option value="paes">Pães e massas</option>
+                            <option value="laticinios">Laticínios</option>
+                            <option value="proteina">Proteínas</option>
+                        </select>
+                    </div>
+                    <div class="filtro-group">
+                        <label for="distancia">Distância Máxima:</label>
+                        <select id="distancia">
+                            <option value="5">5 km</option>
+                            <option value="10" selected>10 km</option>
+                            <option value="20">20 km</option>
+                            <option value="50">50 km</option>
+                        </select>
+                    </div>
+                    <div class="filtro-group">
+                        <label for="ordenar">Ordenar por:</label>
+                        <select id="ordenar">
+                            <option value="proximidade">Mais próximos</option>
+                            <option value="recentes">Mais recentes</option>
+                            <option value="quantidade">Maior quantidade</option>
+                        </select>
+                    </div>
+                    <button class="btn-aplicar">Aplicar Filtros</button>
+                </div>
+            </div>
+
+            <div class="doacoes-list">
+                <div class="loading-msg">Carregando doações...</div>
+            </div>
+
+            <div class="paginacao">
+                <button class="pagina-btn disabled"><i class="fas fa-chevron-left"></i></button>
+                <button class="pagina-btn active">1</button>
+                <button class="pagina-btn">2</button>
+                <button class="pagina-btn">3</button>
+                <button class="pagina-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BOIA</h3>
+                    <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="trocas.html">Trocas</a></li>
+                        <li><a href="minhas-ofertas.html">Minhas Ofertas</a></li>
+                        <li><a href="historico.html">Histórico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/buscar-doacoes.js"></script>
+</body>
+</html>

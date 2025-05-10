@@ -1,0 +1,540 @@
+/* Estilos do Header/Menu */
+.header-logado {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-logado .header-left nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 0;
+}
+
+.header-logado .header-left nav ul li a i {
+    font-size: 1.1rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    width: 200px;
+    display: none;
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu a i {
+    margin-right: 8px;
+    width: 18px;
+    text-align: center;
+}
+
+.notificacoes {
+    position: relative;
+    cursor: pointer;
+}
+
+.notificacao-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos da Página de Detalhes da Oferta */
+.detalhes-oferta-container {
+    padding: 40px 0;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: #2e8b57;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #3cb371;
+    text-decoration: underline;
+}
+
+.oferta-header {
+    margin-bottom: 30px;
+}
+
+.oferta-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.oferta-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.oferta-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.oferta-meta i {
+    color: #2e8b57;
+}
+
+.oferta-content {
+    display: flex;
+    gap: 30px;
+}
+
+.oferta-galeria {
+    flex: 1;
+    max-width: 600px;
+}
+
+.imagem-principal {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.imagens-secundarias {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.imagem-secundaria {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.imagem-secundaria:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.oferta-detalhes {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.detalhes-section {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.detalhes-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.detalhes-section h3 {
+    font-size: 1.3rem;
+    color: #2e8b57;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.detalhes-section p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.detalhes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.detalhe-item {
+    margin-bottom: 10px;
+}
+
+.detalhe-label {
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+.detalhe-valor {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.mapa-placeholder {
+    height: 200px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.mapa-placeholder i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #2e8b57;
+}
+
+.doador-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.doador-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e8f5e9;
+}
+
+.doador-detalhes h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.doador-avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.estrelas {
+    color: #ffc107;
+}
+
+.doador-stats {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.btn-chat {
+    padding: 12px 20px;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.btn-chat:hover {
+    background-color: #3cb371;
+    transform: translateY(-2px);
+}
+
+.garantia-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.garantia-item i {
+    color: #2e8b57;
+    margin-top: 3px;
+    font-size: 1.1rem;
+}
+
+.garantia-item p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.acao-oferta {
+    margin-top: 30px;
+}
+
+.btn-solicitar {
+    width: 100%;
+    padding: 15px;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(46, 139, 87, 0.2);
+}
+
+.btn-solicitar:hover {
+    background-color: #3cb371;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(46, 139, 87, 0.25);
+}
+
+.acao-info {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* Estilos da Página de Relatórios */
+.relatorios-container {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 120px);
+}
+
+.relatorios-header {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.relatorios-header h2 {
+    color: #2e8b57;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+}
+
+.relatorios-header p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.filtros-relatorios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* ... (manter os outros estilos existentes) ... */
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .oferta-content {
+        flex-direction: column;
+    }
+    
+    .detalhes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .oferta-galeria {
+        max-width: 100%;
+    }
+    
+    .imagem-principal {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .dashboard-stats {
+        flex-direction: column;
+    }
+    
+    .oferta-card,
+    .troca-card,
+    .historico-card {
+        flex-direction: column;
+    }
+    
+    .oferta-imagem {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .oferta-actions,
+    .troca-actions,
+    .historico-actions {
+        flex-direction: row;
+        border-left: none;
+        border-top: 1px solid #eee;
+    }
+    
+    .troca-body,
+    .historico-body {
+        flex-direction: column;
+    }
+    
+    .filtros,
+    .filtros-rapidos,
+    .filtros-relatorios {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .resumo-estatistico {
+        grid-template-columns: 1fr;
+    }
+    
+    .graficos-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .grafico-container {
+        min-height: 250px;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .btn-detalhes {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .imagem-principal {
+        height: 300px;
+    }
+    
+    .doador-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .doador-avatar {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .imagem-principal {
+        height: 250px;
+    }
+    
+    .btn-solicitar,
+    .btn-chat {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .detalhes-section h3 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocas - BOIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/trocas.css">
+</head>
+<body>
+    <header class="header-logado">
+        <div class="container">
+            <div class="header-left">
+                <img src="fotos/logo.png" alt="BOIA Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="trocas.html" class="active"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+                        <li><a href="minhas-ofertas.html"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+                        <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+                        <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Mercadinho Frutas</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="perfil.html"><i class="fas fa-user"></i> Meu Perfil</a>
+                        <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+                <div class="notificacoes">
+                    <i class="fas fa-bell"></i>
+                    <span class="notificacao-count">2</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="trocas-container">
+        <div class="container">
+            <div class="page-header">
+                <h2><i class="fas fa-exchange-alt"></i> Minhas Trocas</h2>
+                <div class="filtros-rapidos">
+                    <button class="filtro-btn active">Todas</button>
+                    <button class="filtro-btn">Pendentes</button>
+                    <button class="filtro-btn">Confirmadas</button>
+                    <button class="filtro-btn">Concluídas</button>
+                </div>
+            </div>
+
+            <div class="trocas-list">
+                <div class="troca-card pendente">
+                    <div class="troca-header">
+                        <h3>10 caixas de legumes variados</h3>
+                        <span class="status-badge pendente"><i class="fas fa-hourglass-half"></i> Aguardando confirmação</span>
+                    </div>
+                    <div class="troca-body">
+                        <div class="troca-info">
+                            <div class="info-item">
+                                <i class="fas fa-store"></i>
+                                <div>
+                                    <h4>Supermercado Verde</h4>
+                                    <p>Av. Paulista, 1000 - São Paulo/SP</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <div>
+                                    <h4>Agendamento</h4>
+                                    <p>03/06/2023 - 15:00 às 16:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="troca-actions">
+                            <a href="confirmacao-troca.html" class="btn-action"><i class="fas fa-eye"></i> Detalhes</a>
+                            <button class="btn-action"><i class="fas fa-comments"></i> Chat</button>
+                            <button class="btn-action btn-danger"><i class="fas fa-times"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="troca-card confirmada">
+                    <div class="troca-header">
+                        <h3>5kg de pães diversos</h3>
+                        <span class="status-badge confirmada"><i class="fas fa-check-circle"></i> Confirmada</span>
+                    </div>
+                    <div class="troca-body">
+                        <div class="troca-info">
+                            <div class="info-item">
+                                <i class="fas fa-utensils"></i>
+                                <div>
+                                    <h4>Padaria Pão Quente</h4>
+                                    <p>Rua das Flores, 123 - São Paulo/SP</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <div>
+                                    <h4>Agendamento</h4>
+                                    <p>02/06/2023 - 10:00 às 11:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="troca-actions">
+                            <a href="confirmacao-troca.html" class="btn-action"><i class="fas fa-eye"></i> Detalhes</a>
+                            <button class="btn-action"><i class="fas fa-comments"></i> Chat</button>
+                            <button class="btn-action btn-danger"><i class="fas fa-times"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="troca-card concluida">
+                    <div class="troca-header">
+                        <h3>8 bandejas de verduras</h3>
+                        <span class="status-badge concluida"><i class="fas fa-check-double"></i> Concluída</span>
+                    </div>
+                    <div class="troca-body">
+                        <div class="troca-info">
+                            <div class="info-item">
+                                <i class="fas fa-store"></i>
+                                <div>
+                                    <h4>Mercado Saudável</h4>
+                                    <p>Rua das Hortaliças, 456 - São Paulo/SP</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <div>
+                                    <h4>Realizada em</h4>
+                                    <p>28/05/2023 - 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="troca-actions">
+                            <a href="detalhes-troca.html" class="btn-action"><i class="fas fa-eye"></i> Detalhes</a>
+                            <button class="btn-action"><i class="fas fa-star"></i> Avaliar</button>
+                            <button class="btn-action"><i class="fas fa-redo"></i> Repetir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BOIA</h3>
+                    <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="trocas.html">Trocas</a></li>
+                        <li><a href="minhas-ofertas.html">Minhas Ofertas</a></li>
+                        <li><a href="historico.html">Histórico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/trocas.js"></script>
+</body>
+</html>

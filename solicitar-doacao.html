@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Doação - BOIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/solicitar-doacao.css">
+</head>
+<body>
+    <header class="header-logado">
+        <div class="container">
+            <div class="header-left">
+                <img src="fotos/logo.png" alt="BOIA Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                        <li><a href="trocas.html"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+                        <li><a href="minhas-ofertas.html"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+                        <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+                        <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Mercadinho Flores</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                    <div class="notificacoes">
+                    <i class="fas fa-bell"></i>
+                    <span class="notificacao-count">2</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="solicitar-container">
+        <div class="container">
+            <div class="solicitar-header">
+                <h2><i class="fas fa-hand-holding-heart"></i> Solicitar Doação de Alimentos</h2>
+                <p>Preencha o formulário para solicitar alimentos disponíveis na plataforma</p>
+            </div>
+
+            <div class="solicitar-content">
+                <div class="form-container">
+                    <form id="form-solicitacao">
+                        <div class="form-group">
+                            <label for="tipo-alimento">Tipo de Alimento Necessário *</label>
+                            <select id="tipo-alimento" name="tipo-alimento" required>
+                                <option value="">Selecione o tipo de alimento</option>
+                                <option value="frutas">Frutas</option>
+                                <option value="legumes">Legumes</option>
+                                <option value="verduras">Verduras</option>
+                                <option value="paes">Pães</option>
+                                <option value="laticinios">Laticínios</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantidade">Quantidade Estimada (kg) *</label>
+                            <input type="number" id="quantidade" name="quantidade" min="1" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="data-necessidade">Data de Necessidade *</label>
+                            <input type="date" id="data-necessidade" name="data-necessidade" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descricao">Descrição Detalhada *</label>
+                            <textarea id="descricao" name="descricao" rows="4" required placeholder="Descreva para qual finalidade os alimentos serão utilizados..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="local-retirada">Local de Retirada *</label>
+                            <input type="text" id="local-retirada" name="local-retirada" required placeholder="Endereço completo para retirada">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="horario-retirada">Horário Disponível para Retirada *</label>
+                            <input type="text" id="horario-retirada" name="horario-retirada" required placeholder="Ex: 08:00 às 18:00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contato">Telefone para Contato *</label>
+                            <input type="tel" id="contato" name="contato" required placeholder="(XX) XXXXX-XXXX">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-enviar">Enviar Solicitação</button>
+                            <button type="button" class="btn-cancelar">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="info-container">
+                    <div class="info-card">
+                        <h3><i class="fas fa-info-circle"></i> Como Funciona</h3>
+                        <ol class="passos-lista">
+                            <li>Preencha todos os campos obrigatórios</li>
+                            <li>Sua solicitação será revisada pela equipe BOIA</li>
+                            <li>Doadores próximos receberão sua solicitação</li>
+                            <li>Você será notificado quando houver uma doação disponível</li>
+                            <li>Combine a retirada diretamente com o doador</li>
+                        </ol>
+                    </div>
+
+                    <div class="info-card">
+                        <h3><i class="fas fa-lightbulb"></i> Dicas para Melhor Atendimento</h3>
+                        <ul class="dicas-lista">
+                            <li>Seja específico sobre os tipos de alimentos necessários</li>
+                            <li>Mantenha seus dados de contato atualizados</li>
+                            <li>Esteja preparado para receber a doação no horário combinado</li>
+                            <li>Forneça feedback após receber a doação</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card estatisticas">
+                        <h3><i class="fas fa-chart-line"></i> Estatísticas</h3>
+                        <div class="estatistica-item">
+                            <div class="estatistica-valor">85%</div>
+                            <div class="estatistica-desc">Taxa de sucesso em solicitações</div>
+                        </div>
+                        <div class="estatistica-item">
+                            <div class="estatistica-valor">24h</div>
+                            <div class="estatistica-desc">Tempo médio para atendimento</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BOIA</h3>
+                    <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fas fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Termos</h3>
+                    <ul>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Diretrizes da comunidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/solicitar-doacao.js"></script>
+</body>
+</html>

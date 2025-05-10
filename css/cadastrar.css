@@ -1,0 +1,224 @@
+.hero-interna {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-interna h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-interna p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+}
+
+.cadastro-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.cadastro-container {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cadastro-info {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cadastro-info h2 {
+    font-size: 2rem;
+    color: #2e8b57;
+    margin-bottom: 30px;
+}
+
+.beneficios-list {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.beneficios-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+    display: flex;
+    align-items: flex-start;
+}
+
+.beneficios-list li i {
+    color: #2e8b57;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.depoimento-rapido {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #2e8b57;
+}
+
+.depoimento-rapido p {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.depoimento-rapido .autor {
+    font-weight: 600;
+    color: #2e8b57;
+}
+
+.cadastro-form {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.cadastro-form h3 {
+    font-size: 1.8rem;
+    color: #2e8b57;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2e8b57;
+    outline: none;
+}
+
+.form-group.termos {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.form-group.termos input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.form-group.termos label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.form-group.termos a {
+    color: #2e8b57;
+    text-decoration: none;
+}
+
+.form-group.termos a:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #3cb371;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+.login-link a {
+    color: #2e8b57;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .cadastro-container {
+        flex-direction: column;
+    }
+    
+    .cadastro-info, .cadastro-form {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-interna h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-interna p {
+        font-size: 1.1rem;
+    }
+    
+    .cadastro-info, .cadastro-form {
+        padding: 30px 20px;
+    }
+    
+    .cadastro-info h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cadastro-form h3 {
+        font-size: 1.5rem;
+    }
+}
+.mensagem-erro {
+    color: #d93025;
+    font-weight: 500;
+}

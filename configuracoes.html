@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - BOIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/configuracoes.css">
+</head>
+<body>
+    <header class="header-logado">
+        <div class="container">
+            <div class="header-left">
+                <img src="fotos/logo.png" alt="BOIA Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="trocas.html"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+                        <li><a href="minhas-ofertas.html"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+                        <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+                        <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Mercadinho Flores</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="perfil.html"><i class="fas fa-user"></i> Meu Perfil</a>
+                        <a href="configuracoes.html" class="active"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+                <div class="notificacoes">
+                    <i class="fas fa-bell"></i>
+                    <span class="notificacao-count">2</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="configuracoes-container">
+        <div class="container">
+            <div class="configuracoes-header">
+                <h2><i class="fas fa-cog"></i> Configurações</h2>
+                <p>Gerencie as preferências da sua conta</p>
+            </div>
+
+            <div class="configuracoes-menu">
+                <a href="#notificacoes" class="menu-item active">
+                    <i class="fas fa-bell"></i>
+                    <span>Notificações</span>
+                </a>
+                <a href="#privacidade" class="menu-item">
+                    <i class="fas fa-lock"></i>
+                    <span>Privacidade</span>
+                </a>
+                <a href="#preferencias" class="menu-item">
+                    <i class="fas fa-sliders-h"></i>
+                    <span>Preferências</span>
+                </a>
+                <a href="#conta" class="menu-item">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Conta</span>
+                </a>
+            </div>
+
+            <div class="configuracoes-content">
+                <div id="notificacoes" class="config-section active">
+                    <h3><i class="fas fa-bell"></i> Notificações</h3>
+                    <p>Gerencie como e quando você recebe notificações</p>
+
+                    <div class="config-item">
+                        <div class="config-info">
+                            <h4>Notificações por E-mail</h4>
+                            <p>Receba atualizações importantes por e-mail</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="config-item">
+                        <div class="config-info">
+                            <h4>Notificações no Aplicativo</h4>
+                            <p>Receba alertas sobre novas ofertas e mensagens</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="config-item">
+                        <div class="config-info">
+                            <h4>Notificações de Trocas</h4>
+                            <p>Alertas sobre status das suas trocas</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+
+                    <div class="config-item">
+                        <div class="config-info">
+                            <h4>Notificações de Novidades</h4>
+                            <p>Receba novidades e atualizações da plataforma</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="privacidade" class="config-section">
+                </div>
+
+                <div id="preferencias" class="config-section">
+                </div>
+
+                <div id="conta" class="config-section">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BOIA</h3>
+                    <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Termos</h3>
+                    <ul>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Diretrizes da comunidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/configuracoes.js"></script>
+</body>
+</html>

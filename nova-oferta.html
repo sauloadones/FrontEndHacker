@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Oferta - BOIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nova-oferta.css">
+</head>
+<body>
+    <header class="header-logado">
+        <div class="container">
+            <div class="header-left">
+                <img src="fotos/logo.png" alt="BOIA Logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="dashboard.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="trocas.html"><i class="fas fa-exchange-alt"></i> Trocas</a></li>
+                        <li><a href="minhas-ofertas.html"><i class="fas fa-box-open"></i> Minhas Ofertas</a></li>
+                        <li><a href="historico.html"><i class="fas fa-history"></i> Histórico</a></li>
+                        <li><a href="relatorios.html"><i class="fas fa-chart-bar"></i> Relatórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="user-menu">
+                    <span class="user-name">Mercadinho Frutas</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-menu">
+                        <a href="perfil.html"><i class="fas fa-user"></i> Meu Perfil</a>
+                        <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="#" id="logout"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+                <div class="notificacoes">
+                    <i class="fas fa-bell"></i>
+                    <span class="notificacao-count">3</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="nova-oferta-container">
+        <div class="container">
+            <div class="nova-oferta-header">
+                <h2><i class="fas fa-plus-circle"></i> Nova Oferta de Alimentos</h2>
+                <p>Preencha os detalhes dos alimentos que deseja oferecer</p>
+            </div>
+
+            <form class="oferta-form">
+                <div class="form-section">
+                    <h3><i class="fas fa-info-circle"></i> Informações Básicas</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tipo-alimento">Tipo de Alimento *</label>
+                            <select id="tipo-alimento" name="tipoAlimento" required>
+                                <option value="">Selecione...</option>
+                                <option value="hortifruti">Hortifrúti</option>
+                                <option value="paes">Pães e massas</option>
+                                <option value="laticinios">Laticínios</option>
+                                <option value="proteina">Proteínas (carnes, ovos)</option>
+                                <option value="processados">Alimentos processados</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantidade">Quantidade Aproximada *</label>
+                            <div class="input-with-unit">
+                                <input type="number" id="quantidade" name="quantidade" required>
+                                <select id="unidade" name="unidade">
+                                    <option value="kg">kg</option>
+                                    <option value="unidades">unidades</option>
+                                    <option value="caixas">caixas</option>
+                                    <option value="litros">litros</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-calendar-check"></i> Disponibilidade</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="validade">Data de Validade *</label>
+                            <input type="date" id="validade" name="validade" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="retirada">Prazo para Retirada *</label>
+                            <input type="date" id="retirada" name="prazoRetirada" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="horario">Horário de Retirada *</label>
+                        <input type="text" id="horario" name="horario" placeholder="Ex: 14h às 18h" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Local de Retirada</h3>
+                    <div class="form-group">
+                        <label for="endereco">Endereço Completo *</label>
+                        <input type="text" id="endereco" name="endereco" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="instrucoes">Instruções de Retirada</label>
+                        <textarea id="instrucoes" name="instrucoes" rows="3" placeholder="Ex: Pedir no balcão de atendimento"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-camera"></i> Fotos do Alimento</h3>
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Arraste e solte fotos aqui ou clique para selecionar</p>
+                        <input type="file" id="fotos" name="fotos" multiple accept="image/*">
+                    </div>
+                    <div class="preview-container" id="previewContainer"></div>
+                    <p class="upload-hint">Adicione até 5 fotos que mostrem claramente os alimentos</p>
+                </div>
+
+                <div class="form-section">
+                    <h3><i class="fas fa-clipboard-check"></i> Confirmação</h3>
+                    <div class="form-group termos">
+                        <input type="checkbox" id="termos-oferta" name="termos-oferta" required>
+                        <label for="termos-oferta">Declaro que estes alimentos estão próprios para consumo humano e estou ciente das <a href="#">diretrizes de segurança alimentar</a> da plataforma BOIA.</label>
+                    </div>
+                    <div class="form-group termos">
+                        <input type="checkbox" id="compostagem" name="compostagem">
+                        <label for="compostagem">Caso os alimentos não sejam aceitos por receptores, autorizo o encaminhamento para compostagem.</label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancelar">Cancelar</button>
+                    <button type="submit" class="btn-publicar">Publicar Oferta</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>BOIA</h3>
+                    <p>Conectando doadores a quem precisa, reduzindo o desperdício e transformando vidas.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Ajuda</h3>
+                    <ul>
+                        <li><a href="#">Como funciona</a></li>
+                        <li><a href="#">Perguntas frequentes</a></li>
+                        <li><a href="#">Segurança</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Termos</h3>
+                    <ul>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Diretrizes da comunidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BOIA - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/global.js"></script>
+    <script src="js/nova-oferta.js"></script>
+</body>
+</html>
